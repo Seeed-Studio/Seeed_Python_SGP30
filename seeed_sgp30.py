@@ -3,10 +3,10 @@ from sgp30 import Sgp30
 class grove_sgp30(object):
     def __init__(self, bus):
         self.baseline_conf = "/tmp/SGP30_baseline"
-        self.sgp = Sgp30(bus, baseline_filename = baseline_conf)
+        self.sgp = Sgp30(bus, baseline_filename = self.baseline_conf)
         self.sgp.i2c_geral_call()
         self.sgp.read_features()
-        serial = sgp.read_serial()
+        serial = self.sgp.read_serial()
         print("SGP30 SERIAL: {}".format(serial.raw))
 
         self.sgp.init_sgp()
