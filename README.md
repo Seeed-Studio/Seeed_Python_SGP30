@@ -32,7 +32,10 @@ First, Check the corresponding i2c number of the board:
 ```
 (.env) pi@raspberrypi:~ $ ls /dev/i2c*
 /dev/i2c-1
-#Check if the i2c device works properly， 0x58 is the SGP30 i2c address.
+```
+
+Check if the i2c device works properly， 0x58 is the SGP30 i2c address.
+```
 pi@raspberrypi:~/Seeed_Python_SGP30 $ i2cdetect -y -r 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 00:          -- 04 -- -- -- -- -- -- -- -- -- -- -- 
